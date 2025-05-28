@@ -1,54 +1,47 @@
-# React + TypeScript + Vite
+Описание проекта: Кейс-задача №3 – Приложение для блога
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цель проекта  
+Разработать веб-приложение для ведения блога с возможностью публикации, редактирования и комментирования постов, а также взаимодействия между пользователями.
 
-Currently, two official plugins are available:
+Основные функции  
+Регистрация и авторизация
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Пользователи могут создавать аккаунт и входить в систему.
 
-## Expanding the ESLint configuration
+Создание и управление постами
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Написание, редактирование и удаление постов.
+- Возможность делать посты публичными или скрытыми ("только по запросу").
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Подписки и лента
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Подписка на других пользователей.
+- Генерация персональной ленты на основе подписок.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Категоризация и поиск
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Добавление тегов к постам.
+- Сортировка по тегам.
+
+Комментирование
+
+- Пользователи могут оставлять комментарии под постами.
+
+Просмотр публичных записей
+
+- Возможность читать открытые посты без авторизации.
+
+Технологии
+
+- Frontend: HTML, CSS, TypeScript (React.js), Vite
+- Backend: Python (Django), Node.js
+- База данных: PostgreSQL
+- Дополнительно: JWT-аутентификация, REST API
+
+Особенности
+
+- Гибкая система приватности постов.
+- Удобная сортировка по тегам.
+- Интерактивная лента на основе подписок.
+
+В проекте реализована работа с базами данных и система взаимодействия пользователей
